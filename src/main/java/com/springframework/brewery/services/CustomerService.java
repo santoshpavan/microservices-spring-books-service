@@ -1,2 +1,7 @@
-package com.springframework.brewery.services;public interface CustomerService {
+package com.springframework.brewery.services;
+
+import com.springframework.brewery.web.model.CustomerDto;
+
+public interface CustomerService {
+    CustomerDto getCustomerById();
 }
