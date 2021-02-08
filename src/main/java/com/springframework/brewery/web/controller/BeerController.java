@@ -19,7 +19,7 @@ public class BeerController {
         this.beerService = beerService;
     }
 
-    @GetMapping("/{beerId}")
+    @GetMapping({"/{beerId}"})
     public ResponseEntity<BeerDto> getBeer(@PathVariable("beerId") UUID beerId) {
         return new ResponseEntity<>(beerService.getBeerById(), HttpStatus.OK);
     }
@@ -36,14 +36,14 @@ public class BeerController {
         return new ResponseEntity(httpHeaders, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{beerId}")
+    @PutMapping({"/{beerId}"})
     public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto) {
         beerService.updateBeer(beerId, beerDto);
 
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 
-    @DeleteMapping("/{beerId}")
+    @DeleteMapping({"/{beerId}"})
     @ResponseStatus(HttpStatus.NO_CONTENT) //another way to send Response when no header required
     public void handleDelete(@PathVariable("beerId") UUID beerId) {
         beerService.deleteBeer(beerId);
