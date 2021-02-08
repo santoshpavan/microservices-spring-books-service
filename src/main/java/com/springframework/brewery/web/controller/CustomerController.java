@@ -36,8 +36,8 @@ public class CustomerController {
 
     @PutMapping("/{customerId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void handlePut(@PathVariable("customerId") UUID customerId) {
-        customerService.updateCustomer(customerId);
+    public void handlePut(@PathVariable("customerId") UUID customerId, @RequestBody CustomerDto customerDto) {
+        customerService.updateCustomer(customerId, customerDto);
     }
 
     @DeleteMapping("/{customerId}")

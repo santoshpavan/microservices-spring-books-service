@@ -25,7 +25,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void updateCustomer(UUID customerId) {
+    public void updateCustomer(UUID customerId, CustomerDto customerDto) {
         //TODO: implement updateCustomer
     }
 

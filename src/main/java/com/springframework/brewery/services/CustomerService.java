@@ -9,7 +9,7 @@ public interface CustomerService {
 
     CustomerDto saveNewCustomer(CustomerDto customerDto);
 
-    void updateCustomer(UUID customerId);
+    void updateCustomer(UUID customerId, CustomerDto customerDto);
 
     void deleteCustomer(UUID customerId);
 }
