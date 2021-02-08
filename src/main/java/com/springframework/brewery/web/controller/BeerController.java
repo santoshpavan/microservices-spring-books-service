@@ -42,4 +42,10 @@ public class BeerController {
 
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
+
+    @DeleteMapping("/{beerId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT) //another way to send Response when no header required
+    public void handleDelete(@PathVariable("beerId") UUID beerId) {
+        beerService.deleteBeer(beerId);
+    }
 }
