@@ -1,10 +1,10 @@
-package com.springframework.brewery;
+package com.springframework.msscbookservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BreweryApplicationTests {
+class MsscBookServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
