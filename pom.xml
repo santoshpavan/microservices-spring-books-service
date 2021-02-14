@@ -11,7 +11,7 @@
 	<groupId>com.springframework</groupId>
 	<artifactId>books</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>brewery</name>
+	<name>books</name>
 	<description>Microservices with Spring Boot</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -64,6 +64,11 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpasyncclient</artifactId>
+			<version>4.1.4</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
