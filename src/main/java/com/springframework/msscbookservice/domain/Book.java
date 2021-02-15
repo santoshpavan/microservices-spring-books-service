@@ -1,4 +1,4 @@
-package com.springframework.msscbookservice.web.domain;
+package com.springframework.msscbookservice.domain;
 
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -17,7 +17,7 @@ import java.util.UUID;
 @Builder
 @Entity
 public class Book {
-
+    //JPA annotations
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
