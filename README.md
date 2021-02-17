@@ -10,3 +10,4 @@ The libraries and technologies used here are-
 * Lombok
 * JPA repositories for the data management
 * Builder Pattern for the microservice implementation
+* Added Bean Validations and wsed a global exception handler for controllers using ControllerAdvice
