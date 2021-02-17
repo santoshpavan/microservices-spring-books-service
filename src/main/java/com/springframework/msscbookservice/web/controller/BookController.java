@@ -3,6 +3,7 @@ package com.springframework.msscbookservice.web.controller;
 import com.springframework.msscbookservice.web.model.BookDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -18,13 +19,13 @@ public class BookController {
     }
 
     @PostMapping
-    public ResponseEntity saveNewBook(@RequestBody BookDto bookDto) {
+    public ResponseEntity saveNewBook(@Validated @RequestBody BookDto bookDto) {
         //TODO
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
     @PutMapping("/{bookId}")
-    public ResponseEntity updateBookById(@PathVariable("bookId") UUID bookId, @RequestBody BookDto bookDto) {
+    public ResponseEntity updateBookById(@PathVariable("bookId") UUID bookId, @Validated @RequestBody BookDto bookDto) {
         //TODO
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
