@@ -2,12 +2,14 @@ package com.springframework.msscbookservice.web.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.springframework.msscbookservice.web.model.BookDto;
+import com.springframework.msscbookservice.web.model.BookGenreEnum;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -29,7 +31,7 @@ class BookControllerTest {
 
     @Test
     void saveNewBook() throws Exception {
-        BookDto bookDto = BookDto.builder().build();
+        BookDto bookDto = getValidBookDto();
         String bookDtoJson = objectMapper.writeValueAsString(bookDto);
 
         mockMvc.perform(
@@ -41,7 +43,7 @@ class BookControllerTest {
 
     @Test
     void updateBookById() throws Exception {
-        BookDto bookDto = BookDto.builder().build();
+        BookDto bookDto = getValidBookDto();
         String bookDtoJson = objectMapper.writeValueAsString(bookDto);
 
         mockMvc.perform(
@@ -49,5 +51,14 @@ class BookControllerTest {
                     .contentType(MediaType.APPLICATION_JSON)
                     .content(bookDtoJson)
                 ).andExpect(status().isNoContent());
+    }
+
+    BookDto getValidBookDto(){
+        return BookDto.builder()
+                .bookName("bookname1")
+                .bookGenre(BookGenreEnum.ACTION)
+                .price(new BigDecimal("2.99"))
+                .upc(123123123123L)
+                .build();
     }
 }
