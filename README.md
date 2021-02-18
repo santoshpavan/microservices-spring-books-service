@@ -1,5 +1,7 @@
 # Spring Boot Books Microservice
 
+[![santoshpavan](https://circleci.com/gh/circleci/microservices-spring-books-service.svg?style=svg)](https://youtu.be/dQw4w9WgXcQ)
+
 The client implementation for the same can be found [here](https://github.com/santoshpavan/microservices-spring-books-client).
 
 The libraries and technologies used here are-
