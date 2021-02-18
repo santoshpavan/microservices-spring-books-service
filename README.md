@@ -1,6 +1,6 @@
 # Spring Boot Books Microservice
 
-[![CircleCI](https://circleci.com/gh/circleci/microservices-spring-books-service.svg?style=svg)](https://circleci.com/gh/circleci/microservices-spring-books-service)
+[![CircleCI](https://circleci.com/gh/santoshpavan/microservices-spring-books-service.svg?style=svg)](https://circleci.com/gh/santoshpavan/microservices-spring-books-service)
 
 The client implementation for the same can be found [here](https://github.com/santoshpavan/microservices-spring-books-client).
 
