@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 @Mapper(uses = {DateMapper.class})
 public interface BookMapper {
 
-    BookDto BookToBookDto(Book book);
+    BookDto bookToBookDto(Book book);
 
-    Book BookDtoToBook(BookDto bookDto);
+    Book bookDtoToBook(BookDto bookDto);
 }

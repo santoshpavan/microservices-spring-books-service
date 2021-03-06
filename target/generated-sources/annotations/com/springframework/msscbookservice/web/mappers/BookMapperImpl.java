@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 public class BookMapperImpl implements BookMapper {
 
     @Override
-    public BookDto BookToBookDto(Book book) {
+    public BookDto bookToBookDto(Book book) {
         if ( book == null ) {
             return null;
         }
@@ -25,7 +25,7 @@ public class BookMapperImpl implements BookMapper {
     }
 
     @Override
-    public Book BookDtoToBook(BookDto bookDto) {
+    public Book bookDtoToBook(BookDto bookDto) {
         if ( bookDto == null ) {
             return null;
         }
