@@ -1,11 +1,10 @@
 package com.springframework.msscbookservice.bootstrap;
 
-import com.springframework.msscbookservice.domain.Book;
 import com.springframework.msscbookservice.repositories.BookRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import java.math.BigDecimal;
+import java.util.UUID;
 
 /*
 Runs as bookstrap i.e. before the application starts
@@ -13,6 +12,13 @@ Runs as bookstrap i.e. before the application starts
 
 @Component
 public class BookLoader implements CommandLineRunner {
+
+    public static final String BEER_1_UPC = "0631234200036";
+    public static final String BEER_2_UPC = "0631234300019";
+    public static final String BEER_3_UPC = "0083783375213";
+    public static final UUID BEER_1_UUID = UUID.fromString("0a818933-087d-47f2-ad83-2f986ed087eb");
+    public static final UUID BEER_2_UUID = UUID.fromString("a712d914-61ea-4623-8bd0-32c0f6545bfd");
+    public static final UUID BEER_3_UUID = UUID.fromString("026cc3c8-3a0c-4083-a05b-e908048c1b08");
 
     private final BookRepository bookRepository;
 
@@ -22,32 +28,7 @@ public class BookLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        loadBookObjects();
-    }
-
-    private void loadBookObjects() {
-        if (bookRepository.count() == 0) {
-            // if empty then create
-            bookRepository.save(
-                Book.builder()
-                .bookName("Book 1")
-                .bookGenre("Genre 1")
-                .quantityToWrite(200)
-                .minOnHand(10)
-                .upc(1000001L)
-                .price(new BigDecimal("15.50"))
-                .build()
-            );
-            bookRepository.save(
-                Book.builder()
-                .bookName("Book 2")
-                .bookGenre("Genre 2")
-                .quantityToWrite(200)
-                .minOnHand(10)
-                .upc(1000002L)
-                .price(new BigDecimal("10.00"))
-                .build()
-            );
-        }
+        // use resources/data.sql to load the data
+        // loadBookObjects();
     }
 }
